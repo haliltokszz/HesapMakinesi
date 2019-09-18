@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.tabLogSayfasi = new System.Windows.Forms.TabPage();
-            this.listLog = new System.Windows.Forms.ListView();
-            this.btnGeri = new System.Windows.Forms.Button();
             this.btnTemizle = new System.Windows.Forms.Button();
+            this.btnGeri = new System.Windows.Forms.Button();
+            this.listLog = new System.Windows.Forms.ListView();
             this.tabHesaplamaSayfasi = new System.Windows.Forms.TabPage();
-            this.btnTopla = new System.Windows.Forms.Button();
-            this.lblSayi1 = new System.Windows.Forms.Label();
-            this.lblSayi2 = new System.Windows.Forms.Label();
-            this.lblSonuc = new System.Windows.Forms.Label();
-            this.txtSayi1 = new System.Windows.Forms.TextBox();
-            this.txtSayi2 = new System.Windows.Forms.TextBox();
-            this.txtSonuc = new System.Windows.Forms.TextBox();
-            this.btnİleri = new System.Windows.Forms.Button();
-            this.btnCikarma = new System.Windows.Forms.Button();
-            this.btnCarpma = new System.Windows.Forms.Button();
             this.btnBol = new System.Windows.Forms.Button();
+            this.btnCarpma = new System.Windows.Forms.Button();
+            this.btnCikarma = new System.Windows.Forms.Button();
+            this.btnİleri = new System.Windows.Forms.Button();
+            this.txtSonuc = new System.Windows.Forms.TextBox();
+            this.txtSayi2 = new System.Windows.Forms.TextBox();
+            this.txtSayi1 = new System.Windows.Forms.TextBox();
+            this.lblSonuc = new System.Windows.Forms.Label();
+            this.lblSayi2 = new System.Windows.Forms.Label();
+            this.lblSayi1 = new System.Windows.Forms.Label();
+            this.btnTopla = new System.Windows.Forms.Button();
             this.tabHesapla = new System.Windows.Forms.TabControl();
             this.tabLogSayfasi.SuspendLayout();
             this.tabHesaplamaSayfasi.SuspendLayout();
@@ -63,6 +63,26 @@
             this.tabLogSayfasi.Text = "Log";
             this.tabLogSayfasi.UseVisualStyleBackColor = true;
             // 
+            // btnTemizle
+            // 
+            this.btnTemizle.Location = new System.Drawing.Point(211, 289);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Size = new System.Drawing.Size(86, 37);
+            this.btnTemizle.TabIndex = 2;
+            this.btnTemizle.Text = "Temizle";
+            this.btnTemizle.UseVisualStyleBackColor = true;
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
+            // 
+            // btnGeri
+            // 
+            this.btnGeri.Location = new System.Drawing.Point(79, 289);
+            this.btnGeri.Name = "btnGeri";
+            this.btnGeri.Size = new System.Drawing.Size(73, 37);
+            this.btnGeri.TabIndex = 1;
+            this.btnGeri.Text = "Geri";
+            this.btnGeri.UseVisualStyleBackColor = true;
+            this.btnGeri.Click += new System.EventHandler(this.btnGeri_Click);
+            // 
             // listLog
             // 
             this.listLog.Cursor = System.Windows.Forms.Cursors.Default;
@@ -74,24 +94,6 @@
             this.listLog.TabIndex = 0;
             this.listLog.UseCompatibleStateImageBehavior = false;
             this.listLog.View = System.Windows.Forms.View.Details;
-            // 
-            // btnGeri
-            // 
-            this.btnGeri.Location = new System.Drawing.Point(79, 289);
-            this.btnGeri.Name = "btnGeri";
-            this.btnGeri.Size = new System.Drawing.Size(73, 37);
-            this.btnGeri.TabIndex = 1;
-            this.btnGeri.Text = "Geri";
-            this.btnGeri.UseVisualStyleBackColor = true;
-            // 
-            // btnTemizle
-            // 
-            this.btnTemizle.Location = new System.Drawing.Point(211, 289);
-            this.btnTemizle.Name = "btnTemizle";
-            this.btnTemizle.Size = new System.Drawing.Size(86, 37);
-            this.btnTemizle.TabIndex = 2;
-            this.btnTemizle.Text = "Temizle";
-            this.btnTemizle.UseVisualStyleBackColor = true;
             // 
             // tabHesaplamaSayfasi
             // 
@@ -115,85 +117,15 @@
             this.tabHesaplamaSayfasi.Text = "Hesapla";
             this.tabHesaplamaSayfasi.UseVisualStyleBackColor = true;
             // 
-            // btnTopla
+            // btnBol
             // 
-            this.btnTopla.Location = new System.Drawing.Point(97, 101);
-            this.btnTopla.Name = "btnTopla";
-            this.btnTopla.Size = new System.Drawing.Size(82, 40);
-            this.btnTopla.TabIndex = 6;
-            this.btnTopla.Text = "+";
-            this.btnTopla.UseVisualStyleBackColor = true;
-            this.btnTopla.Click += new System.EventHandler(this.btnTopla_Click);
-            // 
-            // lblSayi1
-            // 
-            this.lblSayi1.AutoSize = true;
-            this.lblSayi1.Location = new System.Drawing.Point(94, 21);
-            this.lblSayi1.Name = "lblSayi1";
-            this.lblSayi1.Size = new System.Drawing.Size(56, 17);
-            this.lblSayi1.TabIndex = 8;
-            this.lblSayi1.Text = "İlk Sayı:";
-            // 
-            // lblSayi2
-            // 
-            this.lblSayi2.AutoSize = true;
-            this.lblSayi2.Location = new System.Drawing.Point(94, 65);
-            this.lblSayi2.Name = "lblSayi2";
-            this.lblSayi2.Size = new System.Drawing.Size(74, 17);
-            this.lblSayi2.TabIndex = 10;
-            this.lblSayi2.Text = "İkinci Sayı:";
-            // 
-            // lblSonuc
-            // 
-            this.lblSonuc.AutoSize = true;
-            this.lblSonuc.Location = new System.Drawing.Point(105, 232);
-            this.lblSonuc.Name = "lblSonuc";
-            this.lblSonuc.Size = new System.Drawing.Size(52, 17);
-            this.lblSonuc.TabIndex = 13;
-            this.lblSonuc.Text = "Sonuç:";
-            // 
-            // txtSayi1
-            // 
-            this.txtSayi1.Location = new System.Drawing.Point(193, 16);
-            this.txtSayi1.Name = "txtSayi1";
-            this.txtSayi1.Size = new System.Drawing.Size(100, 22);
-            this.txtSayi1.TabIndex = 7;
-            this.txtSayi1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSayi1_KeyPress);
-            // 
-            // txtSayi2
-            // 
-            this.txtSayi2.Location = new System.Drawing.Point(193, 60);
-            this.txtSayi2.Name = "txtSayi2";
-            this.txtSayi2.Size = new System.Drawing.Size(100, 22);
-            this.txtSayi2.TabIndex = 9;
-            this.txtSayi2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSayi2_KeyPress);
-            // 
-            // txtSonuc
-            // 
-            this.txtSonuc.Location = new System.Drawing.Point(193, 229);
-            this.txtSonuc.Name = "txtSonuc";
-            this.txtSonuc.ReadOnly = true;
-            this.txtSonuc.Size = new System.Drawing.Size(100, 22);
-            this.txtSonuc.TabIndex = 12;
-            // 
-            // btnİleri
-            // 
-            this.btnİleri.Location = new System.Drawing.Point(157, 284);
-            this.btnİleri.Name = "btnİleri";
-            this.btnİleri.Size = new System.Drawing.Size(75, 30);
-            this.btnİleri.TabIndex = 14;
-            this.btnİleri.Text = "İleri";
-            this.btnİleri.UseVisualStyleBackColor = true;
-            // 
-            // btnCikarma
-            // 
-            this.btnCikarma.Location = new System.Drawing.Point(217, 101);
-            this.btnCikarma.Name = "btnCikarma";
-            this.btnCikarma.Size = new System.Drawing.Size(76, 40);
-            this.btnCikarma.TabIndex = 15;
-            this.btnCikarma.Text = "-";
-            this.btnCikarma.UseVisualStyleBackColor = true;
-            this.btnCikarma.Click += new System.EventHandler(this.btnCikarma_Click);
+            this.btnBol.Location = new System.Drawing.Point(217, 170);
+            this.btnBol.Name = "btnBol";
+            this.btnBol.Size = new System.Drawing.Size(76, 39);
+            this.btnBol.TabIndex = 17;
+            this.btnBol.Text = "÷";
+            this.btnBol.UseVisualStyleBackColor = true;
+            this.btnBol.Click += new System.EventHandler(this.btnBol_Click);
             // 
             // btnCarpma
             // 
@@ -205,15 +137,86 @@
             this.btnCarpma.UseVisualStyleBackColor = true;
             this.btnCarpma.Click += new System.EventHandler(this.btnCarpma_Click);
             // 
-            // btnBol
+            // btnCikarma
             // 
-            this.btnBol.Location = new System.Drawing.Point(217, 170);
-            this.btnBol.Name = "btnBol";
-            this.btnBol.Size = new System.Drawing.Size(76, 39);
-            this.btnBol.TabIndex = 17;
-            this.btnBol.Text = "÷";
-            this.btnBol.UseVisualStyleBackColor = true;
-            this.btnBol.Click += new System.EventHandler(this.btnBol_Click);
+            this.btnCikarma.Location = new System.Drawing.Point(217, 101);
+            this.btnCikarma.Name = "btnCikarma";
+            this.btnCikarma.Size = new System.Drawing.Size(76, 40);
+            this.btnCikarma.TabIndex = 15;
+            this.btnCikarma.Text = "-";
+            this.btnCikarma.UseVisualStyleBackColor = true;
+            this.btnCikarma.Click += new System.EventHandler(this.btnCikarma_Click);
+            // 
+            // btnİleri
+            // 
+            this.btnİleri.Location = new System.Drawing.Point(157, 284);
+            this.btnİleri.Name = "btnİleri";
+            this.btnİleri.Size = new System.Drawing.Size(75, 30);
+            this.btnİleri.TabIndex = 14;
+            this.btnİleri.Text = "İleri";
+            this.btnİleri.UseVisualStyleBackColor = true;
+            this.btnİleri.Click += new System.EventHandler(this.btnİleri_Click);
+            // 
+            // txtSonuc
+            // 
+            this.txtSonuc.Location = new System.Drawing.Point(193, 229);
+            this.txtSonuc.Name = "txtSonuc";
+            this.txtSonuc.ReadOnly = true;
+            this.txtSonuc.Size = new System.Drawing.Size(100, 22);
+            this.txtSonuc.TabIndex = 12;
+            // 
+            // txtSayi2
+            // 
+            this.txtSayi2.Location = new System.Drawing.Point(193, 60);
+            this.txtSayi2.Name = "txtSayi2";
+            this.txtSayi2.Size = new System.Drawing.Size(100, 22);
+            this.txtSayi2.TabIndex = 9;
+            this.txtSayi2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSayi2_KeyPress);
+            // 
+            // txtSayi1
+            // 
+            this.txtSayi1.Location = new System.Drawing.Point(193, 16);
+            this.txtSayi1.Name = "txtSayi1";
+            this.txtSayi1.Size = new System.Drawing.Size(100, 22);
+            this.txtSayi1.TabIndex = 7;
+            this.txtSayi1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSayi1_KeyPress);
+            // 
+            // lblSonuc
+            // 
+            this.lblSonuc.AutoSize = true;
+            this.lblSonuc.Location = new System.Drawing.Point(105, 232);
+            this.lblSonuc.Name = "lblSonuc";
+            this.lblSonuc.Size = new System.Drawing.Size(52, 17);
+            this.lblSonuc.TabIndex = 13;
+            this.lblSonuc.Text = "Sonuç:";
+            // 
+            // lblSayi2
+            // 
+            this.lblSayi2.AutoSize = true;
+            this.lblSayi2.Location = new System.Drawing.Point(94, 65);
+            this.lblSayi2.Name = "lblSayi2";
+            this.lblSayi2.Size = new System.Drawing.Size(74, 17);
+            this.lblSayi2.TabIndex = 10;
+            this.lblSayi2.Text = "İkinci Sayı:";
+            // 
+            // lblSayi1
+            // 
+            this.lblSayi1.AutoSize = true;
+            this.lblSayi1.Location = new System.Drawing.Point(94, 21);
+            this.lblSayi1.Name = "lblSayi1";
+            this.lblSayi1.Size = new System.Drawing.Size(56, 17);
+            this.lblSayi1.TabIndex = 8;
+            this.lblSayi1.Text = "İlk Sayı:";
+            // 
+            // btnTopla
+            // 
+            this.btnTopla.Location = new System.Drawing.Point(97, 101);
+            this.btnTopla.Name = "btnTopla";
+            this.btnTopla.Size = new System.Drawing.Size(82, 40);
+            this.btnTopla.TabIndex = 6;
+            this.btnTopla.Text = "+";
+            this.btnTopla.UseVisualStyleBackColor = true;
+            this.btnTopla.Click += new System.EventHandler(this.btnTopla_Click);
             // 
             // tabHesapla
             // 

@@ -155,5 +155,23 @@ namespace WindowsFormsApp3
         {
             Islemler(0, 0, 3);
         }
+
+        private void btnİleri_Click(object sender, EventArgs e)
+        {
+            tabHesapla.SelectedTab = tabLogSayfasi;
+        }
+
+        private void btnGeri_Click(object sender, EventArgs e)
+        {
+            tabHesapla.SelectedTab = tabHesaplamaSayfasi;
+        }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem secilikayitbilgisi in listLog.SelectedItems)
+            {
+                secilikayitbilgisi.Remove();
+            }
+        }
     }
 }

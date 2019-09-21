@@ -16,32 +16,40 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
         }
-        double ToplamaIslemi(double sayi1, double sayi2)
+        void SayiGirme(string rakam)
         {
-            return sayi1 + sayi2;
+            if (txtSayiEkrani.Text == "0")
+            {
+                txtSayiEkrani.Text = rakam;
+            }else
+                txtSayiEkrani.Text += rakam;
         }
-        double CikarmaIslemi(double sayi1, double sayi2)
+        double ToplamaIslemi(double sayi, double sonuc)
         {
-            return sayi1 - sayi2;
+            return sonuc+= sayi;
         }
-        double BolmeIslemi(double sayi1, double sayi2)
+        double CikarmaIslemi(double sayi, double sonuc)
         {
-            return sayi1 / sayi2;
+            return sonuc -= sayi;
         }
-        double CarpmaIslemi(double sayi1, double sayi2)
+        double BolmeIslemi(double sayi, double sonuc)
         {
-            return sayi1 * sayi2;
+            return sonuc /= sayi;
+        }
+        double CarpmaIslemi(double sayi, double sonuc)
+        {
+            return sonuc *= sayi;
         }
         void EkranHazirla()
         {
-            txtSayi1.Text = txtSayi2.Text = "0";
-            txtSayi1.Focus();
+            txtSayiEkrani.Text = "0";
+            txtSayiEkrani.Focus();
         }
-        void LogYaz(double sayi1,double sayi2, double sonuc)
+        void LogYaz(double sayi1, double sayi2, double sonuc)
         {
             ListViewItem liste;
             string[] degerler= new string[3];
-            degerler[0] = sayi1.ToString(); degerler[1] = sayi2.ToString(); degerler[2] = sonuc.ToString();
+            degerler[0] = sayi1.ToString(); degerler[1] = sayi2.ToString(); degerler[2]=sonuc.ToString();
             liste = new ListViewItem(degerler);
             listLog.Items.Add(liste);
         }
@@ -49,8 +57,7 @@ namespace WindowsFormsApp3
         {
             try
             {
-                Convert.ToDouble(txtSayi1.Text);
-                Convert.ToDouble(txtSayi2.Text);
+                Convert.ToDouble(txtSayiEkrani.Text);
             }
             catch (Exception)
             {
@@ -59,37 +66,36 @@ namespace WindowsFormsApp3
             return true;
         }
 
-        void Islemler(double sayi1, double sayi2, int islem)
+        void Islemler(double sayi1, double gecici, int islem)
         {
-            sayi1 = 0; sayi2 = 0; double sonuc;
+            sayi1 = 0; double sonuc;
             if (Dogrula() == true)
             {
-                sayi1 = Convert.ToDouble(txtSayi1.Text);
-                sayi2 = Convert.ToDouble(txtSayi2.Text);
+                sayi1 = Convert.ToDouble(txtSayiEkrani.Text);
                 switch (islem)
                 {
                     case 0:
-                        sonuc = ToplamaIslemi(sayi1, sayi2);
-                        txtSonuc.Text = sonuc.ToString();
-                        LogYaz(sayi1, sayi2, sonuc);
+                        sonuc = ToplamaIslemi(sayi1, gecici);
+                        txtSonucEkrani.Text = sonuc.ToString();
+                        LogYaz(sayi1, gecici, sonuc);
                         EkranHazirla();
                         break;
                     case 1:
-                        sonuc = CikarmaIslemi(sayi1, sayi2);
-                        txtSonuc.Text = sonuc.ToString();
-                        LogYaz(sayi1, sayi2, sonuc);
+                        sonuc = CikarmaIslemi(sayi1, gecici);
+                        txtSonucEkrani.Text = sonuc.ToString();
+                        LogYaz(sayi1, gecici, sonuc);
                         EkranHazirla();
                         break;
                     case 2:
-                        sonuc = CarpmaIslemi(sayi1, sayi2);
-                        txtSonuc.Text = sonuc.ToString();
-                        LogYaz(sayi1, sayi2, sonuc);
+                        sonuc = CarpmaIslemi(sayi1, gecici);
+                        txtSonucEkrani.Text = sonuc.ToString();
+                        LogYaz(sayi1, gecici, sonuc);
                         EkranHazirla();
                         break;
                     case 3:
-                        sonuc =  BolmeIslemi(sayi1, sayi2);
-                        txtSonuc.Text = sonuc.ToString();
-                        LogYaz(sayi1, sayi2, sonuc);
+                        sonuc =  BolmeIslemi(sayi1, gecici);
+                        txtSonucEkrani.Text = sonuc.ToString();
+                        LogYaz(sayi1, gecici, sonuc);
                         EkranHazirla();
                         break;
                 }
@@ -103,6 +109,7 @@ namespace WindowsFormsApp3
         private void Form1_Load(object sender, EventArgs e)
         {
             EkranHazirla();
+            txtSonucEkrani.Text = "0";
             listLog.View = View.Details;
             listLog.GridLines = true;
             listLog.FullRowSelect = true;
@@ -138,22 +145,22 @@ namespace WindowsFormsApp3
 
         private void btnTopla_Click(object sender, EventArgs e)
         {
-            Islemler(0, 0, 0);
+            Islemler(double.Parse(txtSayiEkrani.Text), double.Parse(txtSonucEkrani.Text), 0);
         }
 
         private void btnCikarma_Click(object sender, EventArgs e)
         {
-            Islemler(0, 0, 1);
+            Islemler(double.Parse(txtSayiEkrani.Text), double.Parse(txtSonucEkrani.Text), 1);
         }
 
         private void btnCarpma_Click(object sender, EventArgs e)
         {
-            Islemler(0, 0, 2);
+            Islemler(double.Parse(txtSayiEkrani.Text), double.Parse(txtSonucEkrani.Text), 2);
         }
 
         private void btnBol_Click(object sender, EventArgs e)
         {
-            Islemler(0, 0, 3);
+            Islemler(double.Parse(txtSayiEkrani.Text), double.Parse(txtSonucEkrani.Text), 3);
         }
 
         private void btnİleri_Click(object sender, EventArgs e)
@@ -172,6 +179,74 @@ namespace WindowsFormsApp3
             {
                 secilikayitbilgisi.Remove();
             }
+        }
+
+        private void btnSayi1_Click(object sender, EventArgs e)
+        {
+            SayiGirme(btnSayi1.Text);
+        }
+
+        private void btnSayi2_Click(object sender, EventArgs e)
+        {
+            SayiGirme(btnSayi2.Text);
+        }
+
+        private void btnSayi3_Click(object sender, EventArgs e)
+        {
+            SayiGirme(btnSayi3.Text);
+
+        }
+
+        private void btnSayi4_Click(object sender, EventArgs e)
+        {
+            SayiGirme(btnSayi4.Text);
+        }
+
+        private void btnSayi5_Click(object sender, EventArgs e)
+        {
+            SayiGirme(btnSayi5.Text);
+        }
+
+        private void btnSayi6_Click(object sender, EventArgs e)
+        {
+            SayiGirme(btnSayi6.Text);
+        }
+
+        private void btnSayi7_Click(object sender, EventArgs e)
+        {
+            SayiGirme(btnSayi7.Text);
+        }
+
+        private void btnSayi8_Click(object sender, EventArgs e)
+        {
+            SayiGirme(btnSayi8.Text);
+        }
+
+        private void btnSayi9_Click(object sender, EventArgs e)
+        {
+            SayiGirme(btnSayi9.Text);
+
+        }
+
+        private void btnSayi0_Click(object sender, EventArgs e)
+        {
+            SayiGirme(btnSayi0.Text);
+        }
+
+        private void btnTopla_Click_1(object sender, EventArgs e)
+        {
+            Islemler(double.Parse(txtSayiEkrani.Text), double.Parse(txtSonucEkrani.Text), 0);
+        }
+
+        private void btnTextboxTemizle_Click(object sender, EventArgs e)
+        {
+            EkranHazirla();
+            txtSonucEkrani.Text = "0";
+        }
+
+        private void btnVirgul_Click(object sender, EventArgs e)
+        {
+            txtSayiEkrani.Text += ",";
         }
     }
 }

@@ -114,9 +114,21 @@ namespace WindowsFormsApp3
         }
         bool SayiMi(string text)
         {
+            int kacinciHarf = 0, virgulHakki =0;
             foreach (char chr in text)
             {
-                if (Char.IsPunctuation(chr)|| Char.IsWhiteSpace(chr) || Char.IsLetter(chr)) return false;
+                
+                if (kacinciHarf == 0 && Char.IsPunctuation(chr) || Char.IsWhiteSpace(chr) || Char.IsLetter(chr)) return false;
+                else if (kacinciHarf != 0 && chr != ',' && Char.IsPunctuation(chr) || Char.IsWhiteSpace(chr) || Char.IsLetter(chr)) return false;
+                else if (chr == ',')
+                {
+                    virgulHakki++;
+                    if (virgulHakki > 1)
+                    {
+                        return false;
+                    }
+                }
+                kacinciHarf++;
             }
             return true;
         }

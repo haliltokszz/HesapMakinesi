@@ -53,23 +53,12 @@ namespace WindowsFormsApp3
             liste = new ListViewItem(degerler);
             listLog.Items.Add(liste);
         }
-        Boolean Dogrula()
-        {
-            try
-            {
-                Convert.ToDouble(txtSayiEkrani.Text);
-            }
-            catch (Exception)
-            {
-                return false;
-            }
-            return true;
-        }
+
 
         void Islemler(double sayi1, double gecici, int islem)
         {
-            sayi1 = 0; double sonuc;
-            if (Dogrula() == true)
+            double sonuc;
+            if (SayiMi(txtSayiEkrani.Text) == true)
             {
                 sayi1 = Convert.ToDouble(txtSayiEkrani.Text);
                 switch (islem)
@@ -122,45 +111,55 @@ namespace WindowsFormsApp3
         private void Form1_Shown(object sender, EventArgs e)
         {
             EkranHazirla();
-            MessageBox.Show("Lütfen ondalıklı sayılar için virgül kullanınız!");
         }
-
-        private void txtSayi1_KeyPress(object sender, KeyPressEventArgs e)
-        {//.isPunctuation fonksiyonunu çıkardık çünkü ondalıklı sayılar için noktalama işareti gerekli..
-            if (
-                char.IsLetter(e.KeyChar) ||
-                char.IsSymbol(e.KeyChar) ||
-                char.IsWhiteSpace(e.KeyChar) 
-                ) e.Handled = true;
+        bool SayiMi(string text)
+        {
+            foreach (char chr in text)
+            {
+                if (Char.IsPunctuation(chr)|| Char.IsWhiteSpace(chr) || Char.IsLetter(chr)) return false;
+            }
+            return true;
         }
-
         private void txtSayi2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (
+            if (e.KeyChar == 44)
+            {
+                e.Handled = false;
+            }      
+            else if (
                 char.IsLetter(e.KeyChar) ||
                 char.IsSymbol(e.KeyChar) ||
-                char.IsWhiteSpace(e.KeyChar) 
+                char.IsWhiteSpace(e.KeyChar) ||
+                char.IsPunctuation(e.KeyChar)
                 ) e.Handled = true;
-        }
-
-        private void btnTopla_Click(object sender, EventArgs e)
-        {
-            Islemler(double.Parse(txtSayiEkrani.Text), double.Parse(txtSonucEkrani.Text), 0);
         }
 
         private void btnCikarma_Click(object sender, EventArgs e)
         {
-            Islemler(double.Parse(txtSayiEkrani.Text), double.Parse(txtSonucEkrani.Text), 1);
+            if (SayiMi(txtSayiEkrani.Text) == true)
+            {
+                Islemler(Convert.ToDouble(txtSayiEkrani.Text), Convert.ToDouble(txtSonucEkrani.Text), 1);
+            }
+            else MessageBox.Show("Girdiğiniz değeri kontrol ediniz!");
         }
 
         private void btnCarpma_Click(object sender, EventArgs e)
         {
-            Islemler(double.Parse(txtSayiEkrani.Text), double.Parse(txtSonucEkrani.Text), 2);
+            if (SayiMi(txtSayiEkrani.Text))
+            {
+                Islemler(Convert.ToDouble(txtSayiEkrani.Text), Convert.ToDouble(txtSonucEkrani.Text), 2);
+            }
+            else MessageBox.Show("Girdiğiniz değeri kontrol ediniz!");
+            
         }
 
         private void btnBol_Click(object sender, EventArgs e)
         {
-            Islemler(double.Parse(txtSayiEkrani.Text), double.Parse(txtSonucEkrani.Text), 3);
+            if (SayiMi(txtSayiEkrani.Text))
+            {
+                Islemler(Convert.ToDouble(txtSayiEkrani.Text), Convert.ToDouble(txtSonucEkrani.Text), 3);
+            }
+            else MessageBox.Show("Girdiğiniz değeri kontrol ediniz!");
         }
 
         private void btnİleri_Click(object sender, EventArgs e)
@@ -233,11 +232,6 @@ namespace WindowsFormsApp3
             SayiGirme(btnSayi0.Text);
         }
 
-        private void btnTopla_Click_1(object sender, EventArgs e)
-        {
-            Islemler(double.Parse(txtSayiEkrani.Text), double.Parse(txtSonucEkrani.Text), 0);
-        }
-
         private void btnTextboxTemizle_Click(object sender, EventArgs e)
         {
             EkranHazirla();
@@ -247,6 +241,16 @@ namespace WindowsFormsApp3
         private void btnVirgul_Click(object sender, EventArgs e)
         {
             txtSayiEkrani.Text += ",";
+        }
+
+        private void btnTopla_Click_3(object sender, EventArgs e)
+        {
+            if (SayiMi(txtSayiEkrani.Text) == true)
+            {
+                Islemler(Convert.ToDouble(txtSayiEkrani.Text), Convert.ToDouble(txtSonucEkrani.Text), 0);
+            }
+            else MessageBox.Show("Girdiğiniz değeri kontrol ediniz!");
+            
         }
     }
 }

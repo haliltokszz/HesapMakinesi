@@ -33,26 +33,26 @@
             this.btnGeri = new System.Windows.Forms.Button();
             this.listLog = new System.Windows.Forms.ListView();
             this.tabHesaplamaSayfasi = new System.Windows.Forms.TabPage();
+            this.btnSayi1 = new System.Windows.Forms.Button();
+            this.btnSayi2 = new System.Windows.Forms.Button();
+            this.btnSayi3 = new System.Windows.Forms.Button();
+            this.btnSayi4 = new System.Windows.Forms.Button();
+            this.btnSayi6 = new System.Windows.Forms.Button();
+            this.btnSayi5 = new System.Windows.Forms.Button();
+            this.btnSayi7 = new System.Windows.Forms.Button();
+            this.btnSayi8 = new System.Windows.Forms.Button();
+            this.btnSayi9 = new System.Windows.Forms.Button();
+            this.btnVirgul = new System.Windows.Forms.Button();
+            this.btnSayi0 = new System.Windows.Forms.Button();
+            this.btnTextboxTemizle = new System.Windows.Forms.Button();
             this.btnBol = new System.Windows.Forms.Button();
             this.btnCarpma = new System.Windows.Forms.Button();
             this.btnCikarma = new System.Windows.Forms.Button();
             this.btnİleri = new System.Windows.Forms.Button();
             this.txtSonucEkrani = new System.Windows.Forms.TextBox();
             this.txtSayiEkrani = new System.Windows.Forms.TextBox();
-            this.btnTopla = new System.Windows.Forms.Button();
             this.tabHesapla = new System.Windows.Forms.TabControl();
-            this.btnTextboxTemizle = new System.Windows.Forms.Button();
-            this.btnSayi0 = new System.Windows.Forms.Button();
-            this.btnVirgul = new System.Windows.Forms.Button();
-            this.btnSayi9 = new System.Windows.Forms.Button();
-            this.btnSayi8 = new System.Windows.Forms.Button();
-            this.btnSayi7 = new System.Windows.Forms.Button();
-            this.btnSayi5 = new System.Windows.Forms.Button();
-            this.btnSayi6 = new System.Windows.Forms.Button();
-            this.btnSayi4 = new System.Windows.Forms.Button();
-            this.btnSayi3 = new System.Windows.Forms.Button();
-            this.btnSayi2 = new System.Windows.Forms.Button();
-            this.btnSayi1 = new System.Windows.Forms.Button();
+            this.btnTopla = new System.Windows.Forms.Button();
             this.tabLogSayfasi.SuspendLayout();
             this.tabHesaplamaSayfasi.SuspendLayout();
             this.tabHesapla.SuspendLayout();
@@ -111,6 +111,7 @@
             // tabHesaplamaSayfasi
             // 
             this.tabHesaplamaSayfasi.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabHesaplamaSayfasi.Controls.Add(this.btnTopla);
             this.tabHesaplamaSayfasi.Controls.Add(this.btnSayi1);
             this.tabHesaplamaSayfasi.Controls.Add(this.btnSayi2);
             this.tabHesaplamaSayfasi.Controls.Add(this.btnSayi3);
@@ -129,7 +130,6 @@
             this.tabHesaplamaSayfasi.Controls.Add(this.btnİleri);
             this.tabHesaplamaSayfasi.Controls.Add(this.txtSonucEkrani);
             this.tabHesaplamaSayfasi.Controls.Add(this.txtSayiEkrani);
-            this.tabHesaplamaSayfasi.Controls.Add(this.btnTopla);
             this.tabHesaplamaSayfasi.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabHesaplamaSayfasi.Location = new System.Drawing.Point(4, 25);
             this.tabHesaplamaSayfasi.Name = "tabHesaplamaSayfasi";
@@ -137,6 +137,150 @@
             this.tabHesaplamaSayfasi.Size = new System.Drawing.Size(236, 333);
             this.tabHesaplamaSayfasi.TabIndex = 0;
             this.tabHesaplamaSayfasi.Text = "Hesapla";
+            // 
+            // btnSayi1
+            // 
+            this.btnSayi1.BackColor = System.Drawing.Color.Honeydew;
+            this.btnSayi1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnSayi1.Location = new System.Drawing.Point(8, 109);
+            this.btnSayi1.Name = "btnSayi1";
+            this.btnSayi1.Size = new System.Drawing.Size(43, 40);
+            this.btnSayi1.TabIndex = 30;
+            this.btnSayi1.Text = "1";
+            this.btnSayi1.UseVisualStyleBackColor = false;
+            this.btnSayi1.Click += new System.EventHandler(this.btnSayi1_Click);
+            // 
+            // btnSayi2
+            // 
+            this.btnSayi2.BackColor = System.Drawing.Color.Honeydew;
+            this.btnSayi2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnSayi2.Location = new System.Drawing.Point(64, 109);
+            this.btnSayi2.Name = "btnSayi2";
+            this.btnSayi2.Size = new System.Drawing.Size(43, 40);
+            this.btnSayi2.TabIndex = 29;
+            this.btnSayi2.Text = "2";
+            this.btnSayi2.UseVisualStyleBackColor = false;
+            this.btnSayi2.Click += new System.EventHandler(this.btnSayi2_Click);
+            // 
+            // btnSayi3
+            // 
+            this.btnSayi3.BackColor = System.Drawing.Color.Honeydew;
+            this.btnSayi3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnSayi3.Location = new System.Drawing.Point(122, 110);
+            this.btnSayi3.Name = "btnSayi3";
+            this.btnSayi3.Size = new System.Drawing.Size(43, 39);
+            this.btnSayi3.TabIndex = 28;
+            this.btnSayi3.Text = "3";
+            this.btnSayi3.UseVisualStyleBackColor = false;
+            this.btnSayi3.Click += new System.EventHandler(this.btnSayi3_Click);
+            // 
+            // btnSayi4
+            // 
+            this.btnSayi4.BackColor = System.Drawing.Color.Honeydew;
+            this.btnSayi4.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnSayi4.Location = new System.Drawing.Point(8, 156);
+            this.btnSayi4.Name = "btnSayi4";
+            this.btnSayi4.Size = new System.Drawing.Size(43, 39);
+            this.btnSayi4.TabIndex = 27;
+            this.btnSayi4.Text = "4";
+            this.btnSayi4.UseVisualStyleBackColor = false;
+            this.btnSayi4.Click += new System.EventHandler(this.btnSayi4_Click);
+            // 
+            // btnSayi6
+            // 
+            this.btnSayi6.BackColor = System.Drawing.Color.Honeydew;
+            this.btnSayi6.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnSayi6.Location = new System.Drawing.Point(122, 155);
+            this.btnSayi6.Name = "btnSayi6";
+            this.btnSayi6.Size = new System.Drawing.Size(43, 39);
+            this.btnSayi6.TabIndex = 26;
+            this.btnSayi6.Text = "6";
+            this.btnSayi6.UseVisualStyleBackColor = false;
+            this.btnSayi6.Click += new System.EventHandler(this.btnSayi6_Click);
+            // 
+            // btnSayi5
+            // 
+            this.btnSayi5.BackColor = System.Drawing.Color.Honeydew;
+            this.btnSayi5.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnSayi5.Location = new System.Drawing.Point(64, 155);
+            this.btnSayi5.Name = "btnSayi5";
+            this.btnSayi5.Size = new System.Drawing.Size(43, 39);
+            this.btnSayi5.TabIndex = 25;
+            this.btnSayi5.Text = "5";
+            this.btnSayi5.UseVisualStyleBackColor = false;
+            this.btnSayi5.Click += new System.EventHandler(this.btnSayi5_Click);
+            // 
+            // btnSayi7
+            // 
+            this.btnSayi7.BackColor = System.Drawing.Color.Honeydew;
+            this.btnSayi7.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnSayi7.Location = new System.Drawing.Point(8, 201);
+            this.btnSayi7.Name = "btnSayi7";
+            this.btnSayi7.Size = new System.Drawing.Size(43, 39);
+            this.btnSayi7.TabIndex = 24;
+            this.btnSayi7.Text = "7";
+            this.btnSayi7.UseVisualStyleBackColor = false;
+            this.btnSayi7.Click += new System.EventHandler(this.btnSayi7_Click);
+            // 
+            // btnSayi8
+            // 
+            this.btnSayi8.BackColor = System.Drawing.Color.Honeydew;
+            this.btnSayi8.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnSayi8.Location = new System.Drawing.Point(64, 201);
+            this.btnSayi8.Name = "btnSayi8";
+            this.btnSayi8.Size = new System.Drawing.Size(43, 39);
+            this.btnSayi8.TabIndex = 23;
+            this.btnSayi8.Text = "8";
+            this.btnSayi8.UseVisualStyleBackColor = false;
+            this.btnSayi8.Click += new System.EventHandler(this.btnSayi8_Click);
+            // 
+            // btnSayi9
+            // 
+            this.btnSayi9.BackColor = System.Drawing.Color.Honeydew;
+            this.btnSayi9.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnSayi9.Location = new System.Drawing.Point(122, 201);
+            this.btnSayi9.Name = "btnSayi9";
+            this.btnSayi9.Size = new System.Drawing.Size(43, 39);
+            this.btnSayi9.TabIndex = 22;
+            this.btnSayi9.Text = "9";
+            this.btnSayi9.UseVisualStyleBackColor = false;
+            this.btnSayi9.Click += new System.EventHandler(this.btnSayi9_Click);
+            // 
+            // btnVirgul
+            // 
+            this.btnVirgul.BackColor = System.Drawing.Color.Honeydew;
+            this.btnVirgul.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnVirgul.Location = new System.Drawing.Point(8, 246);
+            this.btnVirgul.Name = "btnVirgul";
+            this.btnVirgul.Size = new System.Drawing.Size(43, 39);
+            this.btnVirgul.TabIndex = 21;
+            this.btnVirgul.Text = ",";
+            this.btnVirgul.UseVisualStyleBackColor = false;
+            this.btnVirgul.Click += new System.EventHandler(this.btnVirgul_Click);
+            // 
+            // btnSayi0
+            // 
+            this.btnSayi0.BackColor = System.Drawing.Color.Honeydew;
+            this.btnSayi0.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnSayi0.Location = new System.Drawing.Point(64, 246);
+            this.btnSayi0.Name = "btnSayi0";
+            this.btnSayi0.Size = new System.Drawing.Size(43, 39);
+            this.btnSayi0.TabIndex = 20;
+            this.btnSayi0.Text = "0";
+            this.btnSayi0.UseVisualStyleBackColor = false;
+            this.btnSayi0.Click += new System.EventHandler(this.btnSayi0_Click);
+            // 
+            // btnTextboxTemizle
+            // 
+            this.btnTextboxTemizle.BackColor = System.Drawing.Color.Honeydew;
+            this.btnTextboxTemizle.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnTextboxTemizle.Location = new System.Drawing.Point(122, 246);
+            this.btnTextboxTemizle.Name = "btnTextboxTemizle";
+            this.btnTextboxTemizle.Size = new System.Drawing.Size(43, 39);
+            this.btnTextboxTemizle.TabIndex = 19;
+            this.btnTextboxTemizle.Text = "C";
+            this.btnTextboxTemizle.UseVisualStyleBackColor = false;
+            this.btnTextboxTemizle.Click += new System.EventHandler(this.btnTextboxTemizle_Click);
             // 
             // btnBol
             // 
@@ -194,6 +338,7 @@
             this.txtSonucEkrani.ReadOnly = true;
             this.txtSonucEkrani.Size = new System.Drawing.Size(215, 22);
             this.txtSonucEkrani.TabIndex = 12;
+            this.txtSonucEkrani.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtSayiEkrani
             // 
@@ -203,18 +348,6 @@
             this.txtSayiEkrani.TabIndex = 9;
             this.txtSayiEkrani.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtSayiEkrani.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSayi2_KeyPress);
-            // 
-            // btnTopla
-            // 
-            this.btnTopla.BackColor = System.Drawing.Color.Honeydew;
-            this.btnTopla.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnTopla.Location = new System.Drawing.Point(181, 110);
-            this.btnTopla.Name = "btnTopla";
-            this.btnTopla.Size = new System.Drawing.Size(42, 40);
-            this.btnTopla.TabIndex = 6;
-            this.btnTopla.Text = "+";
-            this.btnTopla.UseVisualStyleBackColor = false;
-            this.btnTopla.Click += new System.EventHandler(this.btnTopla_Click_1);
             // 
             // tabHesapla
             // 
@@ -230,149 +363,17 @@
             this.tabHesapla.Size = new System.Drawing.Size(244, 362);
             this.tabHesapla.TabIndex = 0;
             // 
-            // btnTextboxTemizle
+            // btnTopla
             // 
-            this.btnTextboxTemizle.BackColor = System.Drawing.Color.Honeydew;
-            this.btnTextboxTemizle.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnTextboxTemizle.Location = new System.Drawing.Point(122, 246);
-            this.btnTextboxTemizle.Name = "btnTextboxTemizle";
-            this.btnTextboxTemizle.Size = new System.Drawing.Size(43, 39);
-            this.btnTextboxTemizle.TabIndex = 19;
-            this.btnTextboxTemizle.Text = "C";
-            this.btnTextboxTemizle.UseVisualStyleBackColor = false;
-            this.btnTextboxTemizle.Click += new System.EventHandler(this.btnTextboxTemizle_Click);
-            // 
-            // btnSayi0
-            // 
-            this.btnSayi0.BackColor = System.Drawing.Color.Honeydew;
-            this.btnSayi0.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnSayi0.Location = new System.Drawing.Point(64, 246);
-            this.btnSayi0.Name = "btnSayi0";
-            this.btnSayi0.Size = new System.Drawing.Size(43, 39);
-            this.btnSayi0.TabIndex = 20;
-            this.btnSayi0.Text = "0";
-            this.btnSayi0.UseVisualStyleBackColor = false;
-            this.btnSayi0.Click += new System.EventHandler(this.btnSayi0_Click);
-            // 
-            // btnVirgul
-            // 
-            this.btnVirgul.BackColor = System.Drawing.Color.Honeydew;
-            this.btnVirgul.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnVirgul.Location = new System.Drawing.Point(8, 246);
-            this.btnVirgul.Name = "btnVirgul";
-            this.btnVirgul.Size = new System.Drawing.Size(43, 39);
-            this.btnVirgul.TabIndex = 21;
-            this.btnVirgul.Text = ",";
-            this.btnVirgul.UseVisualStyleBackColor = false;
-            this.btnVirgul.Click += new System.EventHandler(this.btnVirgul_Click);
-            // 
-            // btnSayi9
-            // 
-            this.btnSayi9.BackColor = System.Drawing.Color.Honeydew;
-            this.btnSayi9.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnSayi9.Location = new System.Drawing.Point(122, 201);
-            this.btnSayi9.Name = "btnSayi9";
-            this.btnSayi9.Size = new System.Drawing.Size(43, 39);
-            this.btnSayi9.TabIndex = 22;
-            this.btnSayi9.Text = "9";
-            this.btnSayi9.UseVisualStyleBackColor = false;
-            this.btnSayi9.Click += new System.EventHandler(this.btnSayi9_Click);
-            // 
-            // btnSayi8
-            // 
-            this.btnSayi8.BackColor = System.Drawing.Color.Honeydew;
-            this.btnSayi8.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnSayi8.Location = new System.Drawing.Point(64, 201);
-            this.btnSayi8.Name = "btnSayi8";
-            this.btnSayi8.Size = new System.Drawing.Size(43, 39);
-            this.btnSayi8.TabIndex = 23;
-            this.btnSayi8.Text = "8";
-            this.btnSayi8.UseVisualStyleBackColor = false;
-            this.btnSayi8.Click += new System.EventHandler(this.btnSayi8_Click);
-            // 
-            // btnSayi7
-            // 
-            this.btnSayi7.BackColor = System.Drawing.Color.Honeydew;
-            this.btnSayi7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnSayi7.Location = new System.Drawing.Point(8, 201);
-            this.btnSayi7.Name = "btnSayi7";
-            this.btnSayi7.Size = new System.Drawing.Size(43, 39);
-            this.btnSayi7.TabIndex = 24;
-            this.btnSayi7.Text = "7";
-            this.btnSayi7.UseVisualStyleBackColor = false;
-            this.btnSayi7.Click += new System.EventHandler(this.btnSayi7_Click);
-            // 
-            // btnSayi5
-            // 
-            this.btnSayi5.BackColor = System.Drawing.Color.Honeydew;
-            this.btnSayi5.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnSayi5.Location = new System.Drawing.Point(64, 155);
-            this.btnSayi5.Name = "btnSayi5";
-            this.btnSayi5.Size = new System.Drawing.Size(43, 39);
-            this.btnSayi5.TabIndex = 25;
-            this.btnSayi5.Text = "5";
-            this.btnSayi5.UseVisualStyleBackColor = false;
-            this.btnSayi5.Click += new System.EventHandler(this.btnSayi5_Click);
-            // 
-            // btnSayi6
-            // 
-            this.btnSayi6.BackColor = System.Drawing.Color.Honeydew;
-            this.btnSayi6.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnSayi6.Location = new System.Drawing.Point(122, 155);
-            this.btnSayi6.Name = "btnSayi6";
-            this.btnSayi6.Size = new System.Drawing.Size(43, 39);
-            this.btnSayi6.TabIndex = 26;
-            this.btnSayi6.Text = "6";
-            this.btnSayi6.UseVisualStyleBackColor = false;
-            this.btnSayi6.Click += new System.EventHandler(this.btnSayi6_Click);
-            // 
-            // btnSayi4
-            // 
-            this.btnSayi4.BackColor = System.Drawing.Color.Honeydew;
-            this.btnSayi4.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnSayi4.Location = new System.Drawing.Point(8, 156);
-            this.btnSayi4.Name = "btnSayi4";
-            this.btnSayi4.Size = new System.Drawing.Size(43, 39);
-            this.btnSayi4.TabIndex = 27;
-            this.btnSayi4.Text = "4";
-            this.btnSayi4.UseVisualStyleBackColor = false;
-            this.btnSayi4.Click += new System.EventHandler(this.btnSayi4_Click);
-            // 
-            // btnSayi3
-            // 
-            this.btnSayi3.BackColor = System.Drawing.Color.Honeydew;
-            this.btnSayi3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnSayi3.Location = new System.Drawing.Point(122, 110);
-            this.btnSayi3.Name = "btnSayi3";
-            this.btnSayi3.Size = new System.Drawing.Size(43, 39);
-            this.btnSayi3.TabIndex = 28;
-            this.btnSayi3.Text = "3";
-            this.btnSayi3.UseVisualStyleBackColor = false;
-            this.btnSayi3.Click += new System.EventHandler(this.btnSayi3_Click);
-            // 
-            // btnSayi2
-            // 
-            this.btnSayi2.BackColor = System.Drawing.Color.Honeydew;
-            this.btnSayi2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnSayi2.Location = new System.Drawing.Point(64, 109);
-            this.btnSayi2.Name = "btnSayi2";
-            this.btnSayi2.Size = new System.Drawing.Size(43, 40);
-            this.btnSayi2.TabIndex = 29;
-            this.btnSayi2.Text = "2";
-            this.btnSayi2.UseVisualStyleBackColor = false;
-            this.btnSayi2.Click += new System.EventHandler(this.btnSayi2_Click);
-            // 
-            // btnSayi1
-            // 
-            this.btnSayi1.BackColor = System.Drawing.Color.Honeydew;
-            this.btnSayi1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.btnSayi1.Location = new System.Drawing.Point(8, 109);
-            this.btnSayi1.Name = "btnSayi1";
-            this.btnSayi1.Size = new System.Drawing.Size(43, 40);
-            this.btnSayi1.TabIndex = 30;
-            this.btnSayi1.Text = "1";
-            this.btnSayi1.UseVisualStyleBackColor = false;
-            this.btnSayi1.Click += new System.EventHandler(this.btnSayi1_Click);
+            this.btnTopla.BackColor = System.Drawing.Color.Honeydew;
+            this.btnTopla.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.btnTopla.Location = new System.Drawing.Point(181, 110);
+            this.btnTopla.Name = "btnTopla";
+            this.btnTopla.Size = new System.Drawing.Size(42, 40);
+            this.btnTopla.TabIndex = 31;
+            this.btnTopla.Text = "+";
+            this.btnTopla.UseVisualStyleBackColor = false;
+            this.btnTopla.Click += new System.EventHandler(this.btnTopla_Click_3);
             // 
             // Form1
             // 
@@ -407,7 +408,6 @@
         private System.Windows.Forms.Button btnİleri;
         private System.Windows.Forms.TextBox txtSonucEkrani;
         private System.Windows.Forms.TextBox txtSayiEkrani;
-        private System.Windows.Forms.Button btnTopla;
         private System.Windows.Forms.TabControl tabHesapla;
         private System.Windows.Forms.Button btnSayi1;
         private System.Windows.Forms.Button btnSayi2;
@@ -421,6 +421,7 @@
         private System.Windows.Forms.Button btnVirgul;
         private System.Windows.Forms.Button btnSayi0;
         private System.Windows.Forms.Button btnTextboxTemizle;
+        private System.Windows.Forms.Button btnTopla;
     }
 }
 
